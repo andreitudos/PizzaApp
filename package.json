@@ -1,0 +1,19 @@
+{
+  "name": "pizzaapp",
+  "version": "1.0.0",
+  "description": "Projeto Opcional 2",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreitudos/PizzaApp.git"
+  },
+  "author": "A.Tudos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andreitudos/PizzaApp/issues"
+  },
+  "homepage": "https://github.com/andreitudos/PizzaApp#readme"
+}
