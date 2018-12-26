@@ -15,5 +15,24 @@
   "bugs": {
     "url": "https://github.com/andreitudos/PizzaApp/issues"
   },
-  "homepage": "https://github.com/andreitudos/PizzaApp#readme"
+  "homepage": "https://github.com/andreitudos/PizzaApp#readme",
+  "dependencies": {
+    "bcrypt": "*",
+    "body-parse": "*",
+    "connect-flash": "*",
+    "cookie-parser": "*",
+    "express": "*",
+    "express-handlebars": "*",
+    "express-messages": "*",
+    "express-session": "*",
+    "express-validator": "*",
+    "mongodb": "*",
+    "mongoose": "*",
+    "passport": "*",
+    "passport-http": "*",
+    "passport-local": "*"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
 }
