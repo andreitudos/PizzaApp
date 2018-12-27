@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/andreitudos/PizzaApp#readme",
   "dependencies": {
-    "bcrypt": "*",
+    "bcrypt": "^3.0.3",
     "body-parse": "*",
     "connect-flash": "*",
     "cookie-parser": "*",

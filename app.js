@@ -10,8 +10,8 @@ let passport = require('passport');
 let LocalStrategy = require('passport-local'),Strategy;
 let mongo = require('mongodb');
 let mongoose = require('mongoose');
-//mongoose.connect('mongodb://root:abc1234@ds026558.mlab.com:26558/pizzaapp',{ useNewUrlParser: true });
-mongoose.connect('mongodb://localhost:27017/pizzaapp',{ useNewUrlParser: true });
+mongoose.connect('mongodb://root:abc1234@ds026558.mlab.com:26558/pizzaapp',{ useNewUrlParser: true });
+//mongoose.connect('mongodb://localhost:27017/pizzaapp',{ useNewUrlParser: true });
 let db = mongoose.connection;
 
 let routes = require('./routes/index');
