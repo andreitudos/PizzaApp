@@ -9,7 +9,7 @@ let bcrypt = require('bcrypt');
 
 let OrderSchema = mongoose.Schema({
 
-    roder:{
+    oder:{
         type: String,
         unique: true 
     },
