@@ -10,12 +10,14 @@ let passport = require('passport');
 let LocalStrategy = require('passport-local'),Strategy;
 let mongo = require('mongodb');
 let mongoose = require('mongoose');
-mongoose.connect('mongodb://root:abc1234@ds026558.mlab.com:26558/pizzaapp',{ useNewUrlParser: true });
+mongoose.connect('mongodb://root:abc1234@ds026558.mlab.com:26558/pizzaapp',{ useNewUrlParser: true, useCreateIndex: true });
 //mongoose.connect('mongodb://localhost:27017/pizzaapp',{ useNewUrlParser: true });
 let db = mongoose.connection;
 
 let routes = require('./routes/index');
 let users = require('./routes/users');
+let orders = require('./routes/orders');
+let products = require('./routes/products');
 
 //Init
 let app = express();
@@ -32,7 +34,6 @@ app.use(cookieParser());
 
 //Set public folder
 app.use(express.static(path.join(__dirname, 'public')));
-
 
 //Express session
 app.use(session({
@@ -77,6 +78,8 @@ app.use(function (req, res, next) {
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/orders', orders);
+app.use('/products', products);
 
 //Port
 app.set('port', (process.env.PORT || 3000));
