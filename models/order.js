@@ -1,12 +1,5 @@
 let mongoose = require('mongoose');
-let bcrypt = require('bcrypt');
-
-//mongoose.connect('mongodb://ds026558.mlab.com:26558/pizzaapp',{ useNewUrlParser: true });
-//mongoose.connect('mongodb://localhost:27017/pizzaapp',{ useNewUrlParser: true });
-//let db= mongoose.connection;
-
-//User Schema
-
+//Order Schema
 let OrderSchema = mongoose.Schema({
 
     oder:{

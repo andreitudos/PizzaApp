@@ -1,0 +1,43 @@
+<h1>PRODUCTS</h1>
+{{#if product}}
+<div class="alert alert-danger">Username has taken already try new</div>
+{{/if}}
+{{#if sku}}
+<div class="alert alert-danger">Email has taken already try new</div>
+{{/if}}
+{{#if errors}}
+{{#each errors}}
+<div class="alert alert-danger">{{msg}}</div>
+{{/each}}
+{{/if}}
+
+<form method="post" action="/products/newproduct">
+    <div class="wrapper">
+        <div>
+            <h3>Add new product</h3>
+        </div>
+        <div class="rowdiv">
+            Product name:<br><input type="text" name="pNameTxt" id="pNameTxt">
+        </div>
+        <div class="rowdiv">
+            Description:<br><input type="text" name="pDescriptionTxt" id="pDescriptionTxt">
+        </div>
+        <div class="rowdiv">
+            SKU:<br><input type="text" name="pSkuTxt" id="pSkuTxt">
+        </div>
+        <div class="rowdiv">
+            Country:<br>
+            <select name="pCategoryTxt" id="pCategoryTxt">
+                <option value="bases" selected="selected">Base massa</option>
+                <option value="ingredientes">Ingredientes</option>
+                <option value="bebidas">Bebidas</option>
+            </select>
+        </div>
+        <div class="rowdiv">
+            Image:<br> <input type="text" name="pImageTxt" id="pImageTxt">
+        </div>
+        <div class="rowdiv">
+            <button type="submit" class="createbtn">Save product</button>
+        </div>
+    </div>
+</form>

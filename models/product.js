@@ -17,10 +17,14 @@ let ProductSchema = mongoose.Schema({
         unique: true,
         require: true
     },
+    category:{
+        type: String,
+        require: true
+    },
     price: {
         type: Number,
     },
-    iamge:{ type: String} 
+    image:{ type: String} 
 });
 
 let Product = module.exports = mongoose.model('Product', ProductSchema);

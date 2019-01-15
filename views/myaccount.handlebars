@@ -1,55 +1,53 @@
 <h1>A minha Conta</h1>
- <div class="wrapper">
-            <div><h3>Create account</h3></div> 
-            <div  class="columndiv">
-                    First name: <br> <input type="text" name="fnameTxt" id="fnameTxt" value="{{user.fname}}">
-            </div>
-            <div class="centerdiv"> &nbsp;</div>
-            <div  class="columndiv">
-                    Last name:<br><input type="text" name="lnameTxt" id="lnameTxt" value="{{user.lname}}">
-            </div>
-               <div  class="columndiv">
-                    Username: <br> <input type="text" name="userNameTxt" id="userNameTxt" value="{{user.username}}">
-            </div>
-            <div class="centerdiv"> &nbsp;</div>
-            <div  class="columndiv">
-                    VAT number: <br> <input type="text" name="vatTxt" id="vatTxt" value="{{user.vat}}">
-            </div>
-            <div class="rowdiv">
-                    E-mail:<br> <input type="email" name="emailTxt" id="emailTxt" value="{{user.email}}">
-            </div>
-            <div  class="columndiv">
-                    Password: <br> <input type="password" name="pwdTxt" id="pwdTxt" >
-            </div>
-            <div class="centerdiv"> &nbsp;</div>
-
-            <div  class="columndiv">
-                    Re-enter Password:<br><input type="password" name="repwdTxt" id="repwdTxt">
-            </div>
-            <div class="rowdiv">
-                    <hr>
-            </div>
-
-            <div  class="columndiv">
-                    Phonen number: <br> <input type="text" name="phoneTxt" id="phoneTxt" value="{{user.phone}}">
-            </div>
-            <div class="centerdiv"> &nbsp;</div>
-            <div  class="columndiv">
-                    Country:<br>
-                   <select name="countrySelect" id="countrySelect">
-                            <option value="portugal" selected="selected">Portugal</option>
-                            <option value="espanha">Espanha</option>
-                            <option value="alemanha">Alemanha</option>
-                            <option value="russia">Russia</option>
-                    </select>
-            </div>
-
-            <div class="rowdiv">
-                     <button type="submit" class="createbtn">Save changes</button>
-            </div>
-            <br>
-            <div class="rowdiv centertext">  Already have an account?</div>
-            <div class="rowdiv">
-                    <input type="button" class="signbtn" value="Sign in securely" id="signBtn" onclick="/users/login">
-            </div>
+<div class="wrapper">
+        <div>
+                <h3>Editar </h3>
         </div>
+        <div class="columndiv">
+                First name: <br> <input type="text" name="fnameTxt" id="fnameTxt" value="{{user.fname}}">
+        </div>
+        <div class="centerdiv"> &nbsp;</div>
+        <div class="columndiv">
+                Last name:<br><input type="text" name="lnameTxt" id="lnameTxt" value="{{user.lname}}">
+        </div>
+        <div class="columndiv">
+                Username: <br> <input type="text" name="userNameTxt" id="userNameTxt" value="{{user.username}}">
+        </div>
+        <div class="centerdiv"> &nbsp;</div>
+        <div class="columndiv">
+                VAT number: <br> <input type="text" name="vatTxt" id="vatTxt" value="{{user.vat}}">
+        </div>
+        <div class="rowdiv">
+                E-mail:<br> <input type="email" name="emailTxt" id="emailTxt" value="{{user.email}}">
+        </div>
+        <div class="columndiv">
+                Password: <br> <input type="password" name="pwdTxt" id="pwdTxt">
+        </div>
+        <div class="centerdiv"> &nbsp;</div>
+
+        <div class="columndiv">
+                Re-enter Password:<br><input type="password" name="repwdTxt" id="repwdTxt">
+        </div>
+        <div class="rowdiv">
+                <hr>
+        </div>
+
+        <div class="columndiv">
+                Phonen number: <br> <input type="text" name="phoneTxt" id="phoneTxt" value="{{user.phone}}">
+        </div>
+        <div class="centerdiv"> &nbsp;</div>
+        <div class="columndiv">
+                Country:<br>
+                <select name="countrySelect" id="countrySelect">
+                        <option value="portugal" selected="selected">Portugal</option>
+                        <option value="espanha">Espanha</option>
+                        <option value="alemanha">Alemanha</option>
+                        <option value="russia">Russia</option>
+                </select>
+        </div>
+
+        <div class="rowdiv">
+                <button type="submit" class="createbtn">Save changes</button>
+        </div>
+
+</div>
