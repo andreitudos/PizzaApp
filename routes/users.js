@@ -32,13 +32,21 @@ router.post("/register", function(req, res) {
   let country = req.body.countrySelect;
 
   //Validations
-  req.checkBody("fnameTxt", "First name is required").notEmpty();
-  req.checkBody("lnameTxt", "Last name is required").notEmpty();
+  req.checkBody("fnameTxt").notEmpty().withMessage("First name is required")
+                .isLength({ min: 2 }).withMessage("First name requir min 2 chars")
+                .isAlpha().withMessage("First name is alpha onley");
+
+  req.checkBody("lnameTxt", "Last name is required").notEmpty()
+                .isLength({ min: 3 }).withMessage("Last name requir min 2 chars")
+                .isAlpha().withMessage("Last name is alpha onley");
+
   req.checkBody("userNameTxt", "Username is required").notEmpty();
-  req.checkBody("vatTxt", "VAT number is required").notEmpty();
+ // req.checkBody("vatTxt", "VAT number is required").notEmpty();
   req.checkBody("emailTxt", "Email is required").notEmpty();
   req.checkBody("emailTxt", "Email is not valid").isEmail();
   req.checkBody("pwdTxt", "Password is required").notEmpty();
+  req.checkBody("pwdTxt").matches(/[a-zA-Z]+/g,"i").withMessage('Password should be combination of one uppercase , one lower case, one special char, one digit and min 8 , max 20 char long'),
+ // req.checkBody("pwdTxt", "Password min 8 alphanumeric required").isLength({ min: 8});
   req.checkBody("repwdTxt", "Password do not match").equals(req.body.pwdTxt);
   req.checkBody("phoneTxt", "Phone is required").notEmpty();
   req.checkBody("countrySelect", "Country is required").notEmpty();
