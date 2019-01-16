@@ -4,11 +4,14 @@ html {
 body{
   width: 1024px;
   margin: 0px auto;
+  background-color: #171717;
+  color: #717171;
+  font-family: Arial, Helvetica, sans-serif;
 }
 @media (min-width: 768px) {
   html {
     font-size: 16px;
-  }
+   }
 }
 
 .container {
@@ -201,3 +204,6 @@ textarea:focus, input:focus, select:focus{
   border-color: #ee4b4b;
 }
 
+.nav a:hover{
+  background-color: #171717;
+}

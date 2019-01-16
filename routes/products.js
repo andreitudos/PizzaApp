@@ -6,15 +6,17 @@ let apputils = require('./apputils')
 
 let Product = require('../models/product');
 
-//CREATE PRODUCT
-router.get('/',apputils.ensureAuthenticated , function (req, res) {
+//PRODUCTS PAGE
+router.get('/',apputils.ensureAuthenticated , function (req, res, next) {
     res.render('product');
 });
 
-//ADD NEW PRODUCT
+//NEW PRODUCT PAGE
 router.get('/newproduct', function (req, res) {
     res.render('newproduct');
 });
+
+//ADD NEW PRODUCT
 router.post('/newproduct', function (req, res) {
     let productname = req.body.pNameTxt;
     let description = req.body.pDescriptionTxt;
@@ -29,7 +31,6 @@ router.post('/newproduct', function (req, res) {
     req.checkBody('pCategoryTxt', 'Category is required').notEmpty();
     req.checkBody('pImageTxt', 'Image is required').notEmpty();
     
-
     let errors = req.validationErrors();
 
     if(errors){
@@ -51,7 +52,7 @@ router.post('/newproduct', function (req, res) {
         });
         req.flash('success_msg', 'New product successfully added');
 
-        res.redirect('/products/newproduct');
+        res.redirect('/products');
     }
 });
 

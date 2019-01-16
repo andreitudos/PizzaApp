@@ -29,6 +29,7 @@ let ProductSchema = mongoose.Schema({
 
 let Product = module.exports = mongoose.model('Product', ProductSchema);
 
+//POST NEW PRODUCT
 module.exports.createProduct = function (newProduct, callback){
     bcrypt.genSalt(10, function(err, salt){
         newProduct.save(callback);
@@ -44,4 +45,9 @@ module.exports.getProductByName = function(productname, callback){
 //GET PRODUCT BY SKU
 module.exports.getProductBySKU = function(sku, callback){
     Product.findBySKU(sku, callback);
+}
+
+//GET PRODUCT BY CATEGORY
+module.exports.getProductByCategory = function(category, callback){
+    Product.findByCategory(category, callback);
 }
