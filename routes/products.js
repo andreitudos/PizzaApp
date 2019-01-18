@@ -56,4 +56,16 @@ router.post('/newproduct', function (req, res) {
     }
 });
 
+//GET PRODUCTS BASES
+router.get ('/prods', async(req, res, next)=>{
+
+    try {
+        let products = await Product.find({'category':'bases'});
+        res.send(products);
+        next();
+    } catch (err) {
+        return next(new errors.InvalidContentError(err));
+    }
+   
+});
 module.exports = router;

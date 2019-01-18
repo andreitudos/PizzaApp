@@ -1,7 +1,8 @@
 function getNif(elemID){
     let nif = document.getElementById(elemID).value;
     validateNIF(nif);
-}
+    alert('Ola blea');
+    }
 
 
 function validateNIF(value) {
